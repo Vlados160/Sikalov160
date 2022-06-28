@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Главная страница" Height="450" Width="800" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="329*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="655*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <StackPanel Grid.Row="0" Background="LightCyan">
+        <Image Source="images/Большая пачка.png" Width="100" Height="90" />
+            
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Background="LightCyan">
+            <Button x:Name="AgentData" Width="100" Height="20" Margin="0,10,0,10" Content="Агент Дата" Background="DarkCyan" Click="AgentData_Click"/>
+            <Button x:Name="AgentList" Width="100" Height="20" Margin="0,10,0,10" Content="Агент Лист" Background="DarkCyan" Click="AgentList_Click"/>
+            <Button x:Name="Users" Width="100" Height="20" Margin="0,10,0,10" Content="Пользователи" Background="DarkCyan"/>
+            <Button x:Name="Exit" Width="100" Height="20" Margin="0,10,0,10" Content="Выход" Background="DarkCyan" Click="Exit_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Background="LightCyan">
+        </StackPanel>
+        <Button Width="100" Height="20" HorizontalAlignment="Right" Margin="13,0,10,0" Grid.Column="1" Content="Выйти из аккаунта" Background="DarkCyan" Click="Button_Click"/>
+            <Label Grid.Column="1" Content="Большая пачка" FontFamily="Comic Sans MS" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Frame x:Name="MineFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+
+    </Grid>
+</Window>
